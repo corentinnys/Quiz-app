@@ -1,5 +1,6 @@
 import { useState } from "react";
-import Progress from "./progress.jsx";
+
+
 function Questions({ question, currentIndex, setCurrentIndex }) {
     const questions = question?.questions || [];
 
@@ -12,9 +13,7 @@ function Questions({ question, currentIndex, setCurrentIndex }) {
     };
     return (
         <>
-            {<div>
-                <Progress current={currentIndex + 1} total={questions.length} />
-            </div>}
+
         </>
       /*  <div>
             <h2>{currentQuestion.question}</h2>
