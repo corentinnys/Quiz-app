@@ -1,11 +1,9 @@
 import { useState } from "react";
-
+import Progress from "./Progress";
 function Questions({ question, currentIndex, setCurrentIndex }) {
     const questions = question?.questions || [];
 
-    if (questions.length === 0) {
-        return <p>Aucune question</p>;
-    }
+
 
     const currentQuestion = questions[currentIndex];
 
@@ -13,7 +11,11 @@ function Questions({ question, currentIndex, setCurrentIndex }) {
         setCurrentIndex((prev) => prev + 1);
     };
     return (
-        <></>
+        <>
+            {<div>
+                <Progress current={currentIndex + 1} total={questions.length} />
+            </div>}
+        </>
       /*  <div>
             <h2>{currentQuestion.question}</h2>
 
