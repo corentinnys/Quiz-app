@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Progress from "./Progress";
+import Progress from "./progress.jsx";
 function Questions({ question, currentIndex, setCurrentIndex }) {
     const questions = question?.questions || [];
 
